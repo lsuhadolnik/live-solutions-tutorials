@@ -1,0 +1,19 @@
+<fetch>
+	<entity name="activitymimeattachment">
+		<attribute name="filename"/>
+		<attribute name="mimetype"/>
+		<attribute name="filename"/>
+		<attribute name="body"/>
+		<attribute name="filesize"/>
+		<attribute name="activitymimeattachmentid"/>
+		<attribute name="isfollowed"/>
+		<attribute name="anonymouslink"/>
+		<attribute name="mimetype"/>
+		<order attribute="filename" descending="false"/>
+		<link-entity name="email" from="activityid" to="objectid" alias="bb">
+			<filter type="and">
+				<condition attribute="activityid" operator="eq" uitype="email" value="df3615c1-fa45-ec11-8c62-000d3adf5854"/>
+			</filter>
+		</link-entity>
+	</entity>
+</fetch>

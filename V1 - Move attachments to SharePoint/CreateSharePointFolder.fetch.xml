@@ -1,0 +1,29 @@
+<fetch>
+	<entity name="sharepointdocument">
+		<attribute name="documentid"/>
+		<attribute name="fullname"/>
+		<attribute name="relativelocation"/>
+		<attribute name="sharepointcreatedon"/>
+		<attribute name="filetype"/>
+		<attribute name="absoluteurl"/>
+		<attribute name="modified"/>
+		<attribute name="sharepointmodifiedby"/>
+		<attribute name="title"/>
+		<attribute name="readurl"/>
+		<attribute name="editurl"/>
+		<attribute name="author"/>
+		<attribute name="sharepointdocumentid"/>
+		<attribute name="ischeckedout"/>
+		<attribute name="locationid"/>
+		<attribute name="iconclassname"/>
+		<filter>
+			<condition attribute="isrecursivefetch" operator="eq" value="1"/>
+		</filter>
+		<order attribute="relativelocation" descending="false"/>
+		<link-entity name="contact" from="contactid" to="regardingobjectid" alias="bb">
+			<filter type="and">
+				<condition attribute="contactid" operator="eq" uitype="contact" value="82bc6360-0146-ec11-8c62-000d3adf5854"/>
+			</filter>
+		</link-entity>
+	</entity>
+</fetch>
